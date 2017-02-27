@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">VideoCleaner</string>
+    <string name="cancel_text">Остановить сервис</string>
+    <string name="intro_message">Hello This application simple clear video files in Your car camera registrar which are elder then 12hrs
+    </string>
+
+</resources>
