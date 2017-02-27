@@ -32,8 +32,8 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
 
     public void setAlarm(Context context)
     {
-        /*Intent service = new Intent(context, CleanerService.class);
-        startWakefulService(context, service);*/
+        Intent service = new Intent(context, CleanerService.class);
+        startWakefulService(context, service);
 
         alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, AlarmReceiver.class);
@@ -48,7 +48,7 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
 
         alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                 SystemClock.elapsedRealtime() + 2000,
-                AlarmManager.INTERVAL_FIFTEEN_MINUTES, alarmIntent);
+                AlarmManager.INTERVAL_HOUR, alarmIntent);
 
         //alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP,firstMillis+2000, 10000,                     alarmIntent);
         //alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, firstMillis+2000, 30000, alarmIntent);
